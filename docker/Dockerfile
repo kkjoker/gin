@@ -7,5 +7,5 @@ RUN git clone https://github.com/vishnubob/wait-for-it && \
     go install bitbucket.org/liamstask/goose/cmd/goose@latest
 
 WORKDIR "/go/src/gihub.com/kkjoker/gin/api"
-COPY go.mod go.sum ./
+COPY ./api/go.mod ./api/go.sum ./
 RUN go mod download

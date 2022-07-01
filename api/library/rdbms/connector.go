@@ -1,13 +1,13 @@
 package rdbms
 
 import (
-	"github.com/jinzhu/gorm"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/jinzhu/gorm"
 )
 
 var (
-    db  *gorm.DB
-    err error
+	db  *gorm.DB
+	err error
 )
 
 // Init init db
@@ -26,14 +26,15 @@ func Init() {
 		panic(err)
 	}
 }
+
 // GetDB called db
 func GetDB() *gorm.DB {
-    return db
+	return db
 }
 
 // Close closing db
 func Close() {
-    if err := db.Close(); err != nil {
-        panic(err)
-    }
+	if err := db.Close(); err != nil {
+		panic(err)
+	}
 }
